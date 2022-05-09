@@ -1,0 +1,19 @@
+{
+  "rosso": [
+    {
+      "antipasto": ["antipasto a base di carne", "salumi affettati"],
+      "primo": ["primo a base di carne", "primo con sugo di carne"],
+      "secondo": ["secondo a base di carne","formaggi stagionati"]
+    }
+  ],
+  "bianco": [
+    {
+      "antipasto": ["antipasto a base di pesce", "verdure"],
+      "primo": ["primo a base di pesce"],
+      "secondo": ["secondo a base di pesce","formaggi freschi", "carni bianche"]
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
