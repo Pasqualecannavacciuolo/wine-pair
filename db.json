@@ -1,16 +1,80 @@
 {
-  "rosso": [
+  "rosso_leggero": [
     {
-      "antipasto": ["antipasto a base di carne", "salumi affettati"],
-      "primo": ["primo a base di carne", "primo con sugo di carne"],
-      "secondo": ["secondo a base di carne","formaggi stagionati"]
+      "antipasto": [
+        "antipasto a base di carne rossa",
+        "antipasto a base di carne bianca",
+        "salumi affettati"
+      ],
+      "primo": [
+        "primo a base di carne rossa",
+        "primo a base di carne bianca"
+      ],
+      "secondo": [
+        "secondo a base di carne rossa"
+      ]
     }
   ],
-  "bianco": [
+  "rosso_strutturato": [
     {
-      "antipasto": ["antipasto a base di pesce", "verdure"],
-      "primo": ["primo a base di pesce"],
-      "secondo": ["secondo a base di pesce","formaggi freschi", "carni bianche"]
+      "antipasto": [
+        "antipasto a base di carne",
+        "salumi affettati",
+        "formaggi stagionati"
+      ],
+      "primo": [
+        "primo a base di carne rossa",
+        "primo a base di sugo di carne"
+      ],
+      "secondo": [
+        "secondo a base di carne rossa"
+      ]
+    }
+  ],
+  "bianco_leggero": [
+    {
+      "antipasto": [
+        "antipasto a base di pesce",
+        "verdure"
+      ],
+      "primo": [
+        "primo a base di pesce leggero"
+      ],
+      "secondo": [
+        "secondo a base di pesce leggero",
+        "carni bianche"
+      ]
+    }
+  ],
+  "bianco_strutturato": [
+    {
+      "antipasto": [
+        "antipasto a base di pesce",
+        "formaggi freschi"
+      ],
+      "primo": [
+        "primo a base di pesce ricco"
+      ],
+      "secondo": [
+        "secondo a base di pesce ricco",
+        "carni bianche"
+      ]
+    }
+  ],
+  "ricerca": [
+    {
+      "antipasto": "antipasto a base di carne rossa",
+      "primo": "primo a base di carne rossa",
+      "secondo": "secondo a base di carne rossa",
+      "dolce": "si",
+      "id": 1
+    },
+    {
+      "antipasto": "verdure",
+      "primo": "primo a base di pesce ricco",
+      "secondo": "secondo a base di pesce ricco",
+      "dolce": "si",
+      "id": 2
     }
   ],
   "profile": {

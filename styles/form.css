@@ -1,0 +1,66 @@
+form {
+    width: 700px;
+    padding: 35px;
+    background-color: var(--element-bg-color);
+    color: var(--primary-text-color);
+}
+
+input,
+label {
+    margin: 15px 0;
+}
+
+label {
+    font-family: 'campton book';
+}
+
+.input {
+    font-family: inherit;
+    border: none;
+    height: 7%;
+    width: 99%;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.radio {
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    /* For iOS < 15 to remove gradient background */
+    background-color: #fff;
+    /* Not removed via appearance */
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 0.95em;
+    height: 0.95em;
+    border: 0.15em solid currentColor;
+    border-radius: 50%;
+    margin-top: 1em;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+}
+
+input[type="radio"]::before {
+    content: "";
+    width: 0.55em;
+    height: 0.55em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--primary-text-color);
+}
+
+input[type="radio"]:checked::before {
+    transform: scale(1);
+}
+
+input[type="checkbox"] {
+    cursor: pointer;
+    width: 1.1em;
+    height: 1.1em;
+}

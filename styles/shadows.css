@@ -1,0 +1,7 @@
+.inner-shadow-1 {
+    box-shadow: inset 2px 2px 4px var(--shadow-1);
+}
+
+.outer-shadow-2 {
+    box-shadow: 5px 5px 10px var(--shadow-2);
+}

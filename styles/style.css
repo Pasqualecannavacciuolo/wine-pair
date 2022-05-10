@@ -1,0 +1,49 @@
+@import './colors.css';
+@import './cards.css';
+@import './borders.css';
+@import './shadows.css';
+@import './containers.css';
+@import './form.css';
+@import './buttons.css';
+
+@font-face {
+    font-family: 'avenir bold';
+    src: url('../fonts/avenir_next/AvenirNextLTPro-Bold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'campton book';
+    src: url('../fonts/campton/Campton-Book.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'campton light';
+    src: url('../fonts/campton/Campton-Light.woff2')  format('woff2');
+}
+
+body {
+    font-family: 'campton light';
+    background-color: var(--bg-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'avenir bold';
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.margin-TopAndBottom {
+    margin: 30px 0;
+}
+
+.margin-right {
+    margin-right: 20px;
+}

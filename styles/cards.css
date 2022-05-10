@@ -1,0 +1,63 @@
+.card-group {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.card {
+    width: 250px;
+    height: fit-content;
+    background-color: var(--element-bg-color);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 25px;
+    color: var(--primary-text-color);
+}
+
+.card-image img{
+    width: 100%;
+    height: 280px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; 
+}
+
+.card-body {
+    width: 100%;
+}
+
+.card-footer {
+    color: var(--secondary-text-color);
+    font-family: 'campton book';
+    height: 15%;
+    display: flex;
+    flex-direction: row;    
+}
+
+.footer-element {
+    display: flex;
+}
+
+.justify-end {
+    margin-left: auto;
+}
+
+i {
+    transition: all 0.4s;
+    margin: 0 5px;
+}
+
+i:hover {
+    transition: all 0.4s;
+    color: var(--primary-text-color);
+}
+
+@media screen and (max-width: 600px){
+    .card-group {
+        flex-direction: column;
+    }
+    .card {
+        width: auto;
+    }
+}
