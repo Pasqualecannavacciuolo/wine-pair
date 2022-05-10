@@ -72,7 +72,7 @@ export default function Home() {
             <option value="no">No</option>
           </select>
 
-          <input className={styles.form_button} type="submit" value="Submit" />
+          <button className="button  button-default" type="submit" value="Submit"><h2>Submit</h2></button>
 
       </form>
     </div>

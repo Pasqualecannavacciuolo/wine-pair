@@ -2,7 +2,7 @@ form {
     width: 700px;
     padding: 35px;
     background-color: var(--element-bg-color);
-    color: var(--primary-text-color);
+    color: var(--secondary-text-color);
 }
 
 input,

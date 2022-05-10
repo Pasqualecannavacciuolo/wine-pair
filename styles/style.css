@@ -47,3 +47,7 @@ a {
 .margin-right {
     margin-right: 20px;
 }
+
+.output-title {
+    color: var(--primary-text-color);
+}

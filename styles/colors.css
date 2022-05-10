@@ -1,10 +1,11 @@
 :root {
-    --bg-color: #E4EBF1;
-    --element-bg-color: #EFF2F9;
-    --primary-text-color: #505C67;
-    --secondary-text-color: #B5BFC6;
-    --button-default-bg-color: #FEFEFE;
-    --button-default-text-color: #3b434c;
+    --bg-color: #F4E9DC;
+    --element-bg-color: #494949;
+    --primary-text-color: #494949;
+    --secondary-text-color: #F4E9DC;
+    --button-default-bg-color: #E85E56;
+    --button-default-bg-hover-color: #d0443d;
+    --button-default-text-color: #F4E9DC;
     --shadow-1: #22232438;
     --shadow-2: #161b1d41;
 }

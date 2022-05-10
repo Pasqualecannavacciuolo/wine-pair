@@ -237,6 +237,9 @@ export default function Output() {
     return (
         <>
             <div className="centered-container">
+                <h1 className="output-title">Tipologia di vino consigliata</h1>
+            </div>
+            <div className="centered-container">
                 <div className="card-group">
                     {final.map((vino) => (
                         <div className="card border-15 outer-shadow-2">
@@ -251,7 +254,10 @@ export default function Output() {
                     ))}
                 </div>
             </div >
-            <button onClick={backToHome}>Back</button>
+            <div className="centered-container">
+                <button className="button button-large button-default border-5 outer-shadow-2 margin-TopAndBottom" onClick={backToHome}>Back</button>
+            </div>
+            
         </>
     );
 }

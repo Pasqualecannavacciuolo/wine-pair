@@ -12,8 +12,10 @@
     flex-direction: column;
     gap: 2px;
     padding: 25px;
-    color: var(--primary-text-color);
+    color: var(--secondary-text-color);
 }
+
+
 
 .card-image img{
     width: 100%;
