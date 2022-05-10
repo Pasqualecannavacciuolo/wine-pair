@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Image from 'next/image';
+import { useRouter } from 'next/router'
 
 export default function Output() {
+    const router = useRouter()
+
     const [ricerca, setRicerca] = useState(null);
     const [piatti_rosso_leggero, setPiattiRossoLeggero] = useState(null);
     const [piatti_rosso_strutturato, setPiattiRossoStruturato] = useState(null);
@@ -223,21 +225,33 @@ export default function Output() {
     final = Array.from(output);
     console.log(final)
 
+    const backToHome = async () => {
+        const response = await fetch('http://localhost:5000/ricerca/1', {
+            method: 'DELETE'
+        });
+        const data = await response.json();
+        console.log(data);
+        router.push('/');
+    }
+
     return (
-        <div className="centered-container">
-            <div className="card-group">
-                {final.map((vino) => (
-                    <div className="card border-15 outer-shadow-2">
-                    <div className="card-image border-15"><img src={vino.image} layout='fill'></img></div>
-                    <div className="card-body">
-                        <h3 className="card-title">{vino.nome}</h3>
-                        <p className="card-paragraph">
-                            {vino.descrizione}
-                        </p>
+        <>
+            <div className="centered-container">
+                <div className="card-group">
+                    {final.map((vino) => (
+                        <div className="card border-15 outer-shadow-2">
+                        <div className="card-image border-15"><img src={vino.image} layout='fill'></img></div>
+                        <div className="card-body">
+                            <h3 className="card-title">{vino.nome}</h3>
+                            <p className="card-paragraph">
+                                {vino.descrizione}
+                            </p>
+                        </div>
                     </div>
+                    ))}
                 </div>
-                ))}
-            </div>
-        </div >
+            </div >
+            <button onClick={backToHome}>Back</button>
+        </>
     );
 }

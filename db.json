@@ -34,7 +34,7 @@
   "bianco_leggero": [
     {
       "antipasto": [
-        "antipasto a base di pesce",
+        "antipasto a base di pesce leggero",
         "verdure"
       ],
       "primo": [
@@ -42,14 +42,14 @@
       ],
       "secondo": [
         "secondo a base di pesce leggero",
-        "carni bianche"
+        "secondo a base di carne bianca"
       ]
     }
   ],
   "bianco_strutturato": [
     {
       "antipasto": [
-        "antipasto a base di pesce",
+        "antipasto a base di pesce ricco",
         "formaggi freschi"
       ],
       "primo": [
@@ -57,26 +57,11 @@
       ],
       "secondo": [
         "secondo a base di pesce ricco",
-        "carni bianche"
+        "secondo a base di carne bianca"
       ]
     }
   ],
-  "ricerca": [
-    {
-      "antipasto": "antipasto a base di carne rossa",
-      "primo": "primo a base di carne rossa",
-      "secondo": "secondo a base di carne rossa",
-      "dolce": "si",
-      "id": 1
-    },
-    {
-      "antipasto": "verdure",
-      "primo": "primo a base di pesce ricco",
-      "secondo": "secondo a base di pesce ricco",
-      "dolce": "si",
-      "id": 2
-    }
-  ],
+  "ricerca": [],
   "profile": {
     "name": "typicode"
   }
