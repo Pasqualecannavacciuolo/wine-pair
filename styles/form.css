@@ -1,6 +1,9 @@
 form {
     width: 700px;
     padding: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
     background-color: var(--element-bg-color);
     color: var(--secondary-text-color);
 }
@@ -17,7 +20,7 @@ label {
 .input {
     font-family: 'avenir regular';
     border: none;
-    height: 7%;
+    height: 30px;
     width: 99%;
 }
 
@@ -68,5 +71,6 @@ input[type="checkbox"] {
 @media screen and (max-width: 600px){
     form {
         width: 100%;
+        margin: 10px;
     }
 }

@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router'
 import { supabase } from "../lib/initSupabase";
-import styles from '../styles/Home.module.css'
 
 export default function Home() {
   const router = useRouter()
@@ -48,10 +47,9 @@ export default function Home() {
 
   return (
     <div className="centered-container">
-      <form onSubmit={handleSubmit} className={styles.form} method="post">
-
-          <label className={styles.label} htmlFor="antipasto">Antipasto </label>
-          <select className={styles.select} name="antipasto" id="antipasto">
+      <form className="border-15 outer-shadow-2" onSubmit={handleSubmit} method="post">
+          <label htmlFor="antipasto">Antipasto </label>
+          <select className="input" name="antipasto" id="antipasto">
             <option value="antipasto a base di carne rossa">A base di carne rossa</option>
             <option value="antipasto a base di carne bianca">A base di carne bianca</option>
             <option value="antipasto a base di pesce leggero">A base di pesce leggero</option>
@@ -62,8 +60,8 @@ export default function Home() {
             <option value="verdure">Verdure</option>
           </select>
 
-          <label className={styles.label} htmlFor="primo">Primo </label>
-          <select className={styles.select} name="primo" id="primo">
+          <label htmlFor="primo">Primo </label>
+          <select className="input" name="primo" id="primo">
             <option value="primo a base di carne rossa">A base di carne rossa</option>
             <option value="primo a base di carne bianca">A base di carne bianca</option>
             <option value="primo a base di sugo di carne">A base di sugo di carne</option>
@@ -71,16 +69,16 @@ export default function Home() {
             <option value="primo a base di pesce ricco">A base di pesce ricco</option>
           </select>
 
-          <label className={styles.label} htmlFor="secondo">Secondo </label>
-          <select className={styles.select} name="secondo" id="secondo">
+          <label htmlFor="secondo">Secondo </label>
+          <select className="input" name="secondo" id="secondo">
             <option value="secondo a base di carne rossa">A base di carne rossa</option>
             <option value="secondo a base di pesce leggero">A base di pesce leggero</option>
             <option value="secondo a base di pesce ricco">A base di pesce ricco</option>
             <option value="secondo a base di carne bianca">A base di carne bianca</option>
           </select>
 
-          <label className={styles.label} htmlFor="dolce">Dolce </label>
-          <select className={styles.select} name="dolce" id="dolce">
+          <label htmlFor="dolce">Dolce </label>
+          <select className="input" name="dolce" id="dolce">
             <option value="si">Si</option>
             <option value="no">No</option>
           </select>
