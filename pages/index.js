@@ -47,7 +47,7 @@ export default function Home() {
   }
 
   return (
-    <div className={styles.main_container}>
+    <div className="centered-container">
       <form onSubmit={handleSubmit} className={styles.form} method="post">
 
           <label className={styles.label} htmlFor="antipasto">Antipasto </label>
