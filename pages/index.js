@@ -34,6 +34,7 @@ export default function Home() {
     .from("ricerca")
     .insert([
       {
+        id: 1,
         antipasto: data.antipasto,
         primo: data.primo,
         secondo: data.secondo

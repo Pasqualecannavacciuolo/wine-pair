@@ -351,11 +351,15 @@ export default function Output() {
     console.log(final)
 
     const backToHome = async () => {
-        const response = await fetch('http://localhost:5000/ricerca/1', {
+       /*const response = await fetch('http://localhost:5000/ricerca/1', {
             method: 'DELETE'
         });
         const data = await response.json();
-        console.log(data);
+        console.log(data);*/
+        const { data, error } = await supabase
+            .from('ricerca')
+            .delete()
+            .match({ id: 1 })
         router.push('/');
     }
 
