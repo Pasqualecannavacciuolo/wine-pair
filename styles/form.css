@@ -67,6 +67,6 @@ input[type="checkbox"] {
 
 @media screen and (max-width: 600px){
     form {
-        width: auto;
+        width: 100%;
     }
 }
