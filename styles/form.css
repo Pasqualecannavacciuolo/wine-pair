@@ -11,11 +11,11 @@ label {
 }
 
 label {
-    font-family: 'campton book';
+    font-family: 'gibson bold';
 }
 
 .input {
-    font-family: inherit;
+    font-family: 'avenir regular';
     border: none;
     height: 7%;
     width: 99%;

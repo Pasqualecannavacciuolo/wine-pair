@@ -29,10 +29,14 @@
 
 .card-footer {
     color: var(--secondary-text-color);
-    font-family: 'campton book';
+    font-family: 'gibson regular italic';
     height: 15%;
     display: flex;
     flex-direction: row;    
+}
+
+.card-paragraph {
+    font-family: 'avenir regular';
 }
 
 .footer-element {

@@ -7,22 +7,22 @@
 @import './buttons.css';
 
 @font-face {
-    font-family: 'avenir bold';
-    src: url('../fonts/avenir_next/AvenirNextLTPro-Bold.woff2') format('woff2');
+    font-family: 'avenir regular';
+    src: url('../fonts/avenir_next/AvenirNextLTPro-Regular.woff2') format('woff2');
 }
 
 @font-face {
-    font-family: 'campton book';
-    src: url('../fonts/campton/Campton-Book.woff2') format('woff2');
+    font-family: 'gibson bold';
+    src: url('../fonts/gibson/gibson-bold.woff2') format('woff2');
 }
 
 @font-face {
-    font-family: 'campton light';
-    src: url('../fonts/campton/Campton-Light.woff2')  format('woff2');
+    font-family: 'gibson regular italic';
+    src: url('../fonts/gibson/Gibson-RegularItalic.woff2')  format('woff2');
 }
 
 body {
-    font-family: 'campton light';
+    font-family: 'avenir regular';
     background-color: var(--bg-color);
 }
 
@@ -32,7 +32,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'avenir bold';
+    font-family: 'gibson bold';
 }
 
 a {
