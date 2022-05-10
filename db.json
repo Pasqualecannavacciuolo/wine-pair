@@ -61,15 +61,7 @@
       ]
     }
   ],
-  "ricerca": [
-    {
-      "antipasto": "antipasto a base di carne rossa",
-      "primo": "primo a base di carne rossa",
-      "secondo": "secondo a base di carne rossa",
-      "dolce": "si",
-      "id": 1
-    }
-  ],
+  "ricerca": [],
   "profile": {
     "name": "typicode"
   }
