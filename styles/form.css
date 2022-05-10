@@ -64,3 +64,9 @@ input[type="checkbox"] {
     width: 1.1em;
     height: 1.1em;
 }
+
+@media screen and (max-width: 600px){
+    form {
+        width: auto;
+    }
+}
