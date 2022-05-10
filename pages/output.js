@@ -1,14 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from 'next/router';
-import { createClient } from '@supabase/supabase-js'
+import { supabase } from "../lib/initSupabase";
 
 
 export default function Output() {
     const router = useRouter();
-
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-    const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_KEY;
-    const supabase = createClient(supabaseUrl, supabaseKey);
 
     const [ricerca, setRicerca] = useState(null);
     const [piatti_rosso_leggero, setPiattiRossoLeggero] = useState(null);

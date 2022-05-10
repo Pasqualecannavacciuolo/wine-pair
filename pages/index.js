@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router'
-import { createClient } from '@supabase/supabase-js'
+import { supabase } from "../lib/initSupabase";
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -26,9 +26,7 @@ export default function Home() {
       headers: {'Content-Type': 'application/json'},
       body: JSONdata
     });*/
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-    const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_KEY;
-    const supabase = createClient(supabaseUrl, supabaseKey);
+    
 
     const { dati } = await supabase
     .from("ricerca")
