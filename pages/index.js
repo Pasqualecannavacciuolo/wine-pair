@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router'
+import { createClient } from '@supabase/supabase-js'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -17,14 +18,27 @@ export default function Home() {
     }
 
     // Send the data to the server in JSON format.
-    const JSONdata = JSON.stringify(data)
+    //const JSONdata = JSON.stringify(data)
 
 
-    fetch('http://localhost:5000/ricerca', {
+    /*fetch('http://localhost:5000/ricerca', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSONdata
-    });
+    });*/
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+    const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_KEY;
+    const supabase = createClient(supabaseUrl, supabaseKey);
+
+    const { dati } = await supabase
+    .from("ricerca")
+    .insert([
+      {
+        antipasto: data.antipasto,
+        primo: data.primo,
+        secondo: data.secondo
+      }
+    ]);
 
     //console.log(result);
     alert(`I dati sono stati registrati`);
