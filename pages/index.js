@@ -83,7 +83,7 @@ export default function Home() {
             <option value="no">No</option>
           </select>
 
-          <button className="button  button-default" type="submit" value="Submit"><h2>Submit</h2></button>
+          <button className="button  button-default margin-TopAndBottom" type="submit" value="Submit"><h2>Submit</h2></button>
 
       </form>
     </div>
