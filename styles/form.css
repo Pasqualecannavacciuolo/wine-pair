@@ -21,7 +21,7 @@ label {
     font-family: 'avenir regular';
     border: none;
     height: 30px;
-    width: 99%;
+    width: 100%;
 }
 
 .input:focus {
