@@ -62,10 +62,10 @@ i:hover {
 @media screen and (max-width: 600px){
     .card-group {
         flex-direction: column;
+        margin: 10px;
     }
     .card {
         width: auto;
-        margin: 10px;
     }
     .output-title {
         text-align: center;
