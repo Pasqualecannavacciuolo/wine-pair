@@ -22,6 +22,7 @@ label {
     border: none;
     height: 30px;
     width: 100%;
+    -webkit-appearance: none;
 }
 
 .input:focus {
