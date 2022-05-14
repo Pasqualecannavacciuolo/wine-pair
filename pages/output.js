@@ -1,6 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from 'next/router';
 import { supabase } from "../lib/initSupabase";
+import form_style from "../styles/Form.module.css";
+
+import Image from 'next/image';
+import {
+    Box,
+    Center,
+    Heading,
+    Text,
+    Stack,
+    SimpleGrid,
+    useColorModeValue,
+    Button,
+} from '@chakra-ui/react';
+
 
 
 export default function Output() {
@@ -170,7 +184,7 @@ export default function Output() {
         }
     }
 
-    
+
     const antipasto_rosso_leggero = piatti_rosso_leggero && piatti_rosso_leggero.antipasto;
     const primo_rosso_leggero = piatti_rosso_leggero && piatti_rosso_leggero.primo;
     const secondo_rosso_leggero = piatti_rosso_leggero && piatti_rosso_leggero.secondo;
@@ -218,7 +232,7 @@ export default function Output() {
             if (antipasto_rosso_leggero[i] === antipasto) {
                 //console.log("Uguali antipasti")
                 vino_rosso_leggero.id = (new Date()).getTime() + Math.random()
-                vino_rosso_leggero.image = 'images/rosso-leggero.jpeg';
+                vino_rosso_leggero.image = '/images/rosso-leggero.jpeg';
                 vino_rosso_leggero.nome = "Rosso Leggero";
                 vino_rosso_leggero.descrizione = "Un vino leggero da accompagnare a piatti con gusti delicati non troppo travolgenti"
                 output.add(vino_rosso_leggero)
@@ -228,7 +242,7 @@ export default function Output() {
             if (primo_rosso_leggero[j] === primo) {
                 //console.log("Uguali primi")
                 vino_rosso_leggero.id = (new Date()).getTime() + Math.random()
-                vino_rosso_leggero.image = 'images/rosso-leggero.jpeg';
+                vino_rosso_leggero.image = '/images/rosso-leggero.jpeg';
                 vino_rosso_leggero.nome = "Rosso Leggero";
                 vino_rosso_leggero.descrizione = "Un vino leggero da accompagnare a piatti con gusti delicati non troppo travolgenti"
                 output.add(vino_rosso_leggero)
@@ -238,7 +252,7 @@ export default function Output() {
             if (secondo_rosso_leggero[i] === secondo) {
                 //console.log("Uguali secondi")
                 vino_rosso_leggero.id = (new Date()).getTime() + Math.random()
-                vino_rosso_leggero.image = 'images/rosso-leggero.jpeg';
+                vino_rosso_leggero.image = '/images/rosso-leggero.jpeg';
                 vino_rosso_leggero.nome = "Rosso Leggero";
                 vino_rosso_leggero.descrizione = "Un vino leggero da accompagnare a piatti con gusti delicati non troppo travolgenti"
                 output.add(vino_rosso_leggero)
@@ -251,7 +265,7 @@ export default function Output() {
             if (antipasto_rosso_strutturato[i] === antipasto) {
                 //console.log("Uguali antipasti")
                 vino_rosso_strutturato.id = (new Date()).getTime() + Math.random()
-                vino_rosso_strutturato.image = 'images/rosso-strutturato.jpeg';
+                vino_rosso_strutturato.image = '/images/rosso-strutturato.jpeg';
                 vino_rosso_strutturato.nome = "Rosso Strutturato";
                 vino_rosso_strutturato.descrizione = "Un vino strutturato da accompagnare a piatti con gusti forti e decisi per godersi al meglio la cena"
                 output.add(vino_rosso_strutturato)
@@ -261,7 +275,7 @@ export default function Output() {
             if (primo_rosso_strutturato[j] === primo) {
                 //console.log("Uguali primi")
                 vino_rosso_strutturato.id = (new Date()).getTime() + Math.random()
-                vino_rosso_strutturato.image = 'images/rosso-strutturato.jpeg';
+                vino_rosso_strutturato.image = '/images/rosso-strutturato.jpeg';
                 vino_rosso_strutturato.nome = "Rosso Strutturato";
                 vino_rosso_strutturato.descrizione = "Un vino strutturato da accompagnare a piatti con gusti forti e decisi per godersi al meglio la cena"
                 output.add(vino_rosso_strutturato)
@@ -271,7 +285,7 @@ export default function Output() {
             if (secondo_rosso_strutturato[i] === secondo) {
                 //console.log("Uguali secondi")
                 vino_rosso_strutturato.id = (new Date()).getTime() + Math.random()
-                vino_rosso_strutturato.image = 'images/rosso-strutturato.jpeg';
+                vino_rosso_strutturato.image = '/images/rosso-strutturato.jpeg';
                 vino_rosso_strutturato.nome = "Rosso Strutturato";
                 vino_rosso_strutturato.descrizione = "Un vino strutturato da accompagnare a piatti con gusti forti e decisi per godersi al meglio la cena"
                 output.add(vino_rosso_strutturato)
@@ -284,7 +298,7 @@ export default function Output() {
         for (let i = 0; i < antipasto_bianco_leggero.length; i++) {
             if (antipasto_bianco_leggero[i] === antipasto) {
                 vino_bianco_leggero.id = (new Date()).getTime() + Math.random()
-                vino_bianco_leggero.image = 'images/bianco-leggero.png';
+                vino_bianco_leggero.image = '/images/bianco-leggero.png';
                 vino_bianco_leggero.nome = "Bianco Leggero";
                 vino_bianco_leggero.descrizione = "Un vino leggero da accompagnare a piatti con gusti delicati non troppo travolgenti"
                 output.add(vino_bianco_leggero)
@@ -293,7 +307,7 @@ export default function Output() {
         for (let j = 0; j < primo_bianco_leggero.length; j++) {
             if (primo_bianco_leggero[j] === primo) {
                 vino_bianco_leggero.id = (new Date()).getTime() + Math.random()
-                vino_bianco_leggero.image = 'images/bianco-leggero.png';
+                vino_bianco_leggero.image = '/images/bianco-leggero.png';
                 vino_bianco_leggero.nome = "Bianco Leggero";
                 vino_bianco_leggero.descrizione = "Un vino leggero da accompagnare a piatti con gusti delicati non troppo travolgenti"
                 output.add(vino_bianco_leggero)
@@ -302,7 +316,7 @@ export default function Output() {
         for (let i = 0; i < secondo_bianco_leggero.length; i++) {
             if (secondo_bianco_leggero[i] === secondo) {
                 vino_bianco_leggero.id = (new Date()).getTime() + Math.random()
-                vino_bianco_leggero.image = 'images/bianco-leggero.png';
+                vino_bianco_leggero.image = '/images/bianco-leggero.png';
                 vino_bianco_leggero.nome = "Bianco Leggero";
                 vino_bianco_leggero.descrizione = "Un vino leggero da accompagnare a piatti con gusti delicati non troppo travolgenti"
                 output.add(vino_bianco_leggero)
@@ -314,7 +328,7 @@ export default function Output() {
         for (let i = 0; i < antipasto_bianco_strutturato.length; i++) {
             if (antipasto_bianco_strutturato[i] === antipasto) {
                 vino_bianco_strutturato.id = (new Date()).getTime() + Math.random()
-                vino_bianco_strutturato.image = 'images/bianco-strutturato.jpeg';
+                vino_bianco_strutturato.image = '/images/bianco-strutturato.jpeg';
                 vino_bianco_strutturato.nome = "Bianco Strutturato";
                 vino_bianco_strutturato.descrizione = "Un vino strutturato da accompagnare a piatti con gusti forti e decisi per godersi al meglio la cena"
                 output.add(vino_bianco_strutturato)
@@ -323,7 +337,7 @@ export default function Output() {
         for (let j = 0; j < primo_bianco_strutturato.length; j++) {
             if (primo_bianco_strutturato[j] === primo) {
                 vino_bianco_strutturato.id = (new Date()).getTime() + Math.random()
-                vino_bianco_strutturato.image = 'images/bianco-strutturato.jpeg';
+                vino_bianco_strutturato.image = '/images/bianco-strutturato.jpeg';
                 vino_bianco_strutturato.nome = "Bianco Strutturato";
                 vino_bianco_strutturato.descrizione = "Un vino strutturato da accompagnare a piatti con gusti forti e decisi per godersi al meglio la cena"
                 output.add(vino_bianco_strutturato)
@@ -332,7 +346,7 @@ export default function Output() {
         for (let i = 0; i < secondo_bianco_strutturato.length; i++) {
             if (secondo_bianco_strutturato[i] === secondo) {
                 vino_bianco_strutturato.id = (new Date()).getTime() + Math.random()
-                vino_bianco_strutturato.image = 'images/bianco-strutturato.jpeg';
+                vino_bianco_strutturato.image = '/images/bianco-strutturato.jpeg';
                 vino_bianco_strutturato.nome = "Bianco Strutturato";
                 vino_bianco_strutturato.descrizione = "Un vino strutturato da accompagnare a piatti con gusti forti e decisi per godersi al meglio la cena"
                 output.add(vino_bianco_strutturato)
@@ -347,11 +361,11 @@ export default function Output() {
     console.log(final)
 
     const backToHome = async () => {
-       /*const response = await fetch('http://localhost:5000/ricerca/1', {
-            method: 'DELETE'
-        });
-        const data = await response.json();
-        console.log(data);*/
+        /*const response = await fetch('http://localhost:5000/ricerca/1', {
+             method: 'DELETE'
+         });
+         const data = await response.json();
+         console.log(data);*/
         const { data, error } = await supabase
             .from('ricerca')
             .delete()
@@ -359,32 +373,59 @@ export default function Output() {
         router.push('/form');
     }
 
-    
-    return (
-        <>
-            
-            <div className="centered-container">
-                <h1 className="output-title">Tipologia di vino consigliata</h1>
-            </div>
-            <div className="centered-container">
-                <div className="card-group">
-                    {final.map((vino) => (
-                        <div key={vino.id} className="card border-15 outer-shadow-2">
-                            <div className="card-image border-15"><img src={vino.image} layout='fill'></img></div>
-                            <div className="card-body">
-                                <h3 className="card-title">{vino.nome}</h3>
-                                <p className="card-paragraph">
-                                    {vino.descrizione}
-                                </p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div >
-            <div className="centered-container">
-                <button className="button button-large button-default border-5 outer-shadow-2 margin-TopAndBottom" onClick={backToHome}>Back</button>
-            </div>
 
-        </>
+    return (
+        <div className={form_style.form_bg_image}>
+            <Center className="cards-wrapper-title"><Heading m={10} color={'gray.900'} className="form-title">I vini consigliati</Heading></Center>
+
+            <Center>
+                <SimpleGrid columns={[1, null, 2]} spacing='40px'>
+                    {final.map((vino) => (
+                        <Box
+                            className="card"
+                            key={vino.id}
+                            maxW={'250px'}
+                            w={'full'}
+                            bg={useColorModeValue('white', 'gray.900')}
+                            boxShadow={'2xl'}
+                            rounded={'md'}
+                            p={6}
+                            overflow={'hidden'}>
+                            <Box>
+                                <img src={vino.image}></img>
+                            </Box>
+                            <Stack>
+                                <Heading
+                                    color={useColorModeValue('gray.700', 'white')}
+                                    fontSize={'2xl'}
+                                    fontFamily={'body'}>
+                                    {vino.nome}
+                                </Heading>
+                                <Text color={'gray.500'}>
+                                    {vino.descrizione}
+                                </Text>
+                            </Stack>
+                        </Box>
+                    ))}
+                </SimpleGrid>
+            </Center>
+            
+            <Center>
+                <Button
+                onClick={backToHome}
+                type='submit'
+                className="margin-TopAndBottom"
+                borderRadius='5px'
+                size={'lg'}
+                fontWeight={'normal'}
+                px={6}
+                colorScheme={'purple'}
+                bg={'purple.600'}
+                _hover={{ bg: 'purple.700' }}>
+                Ritorna al menu
+                </Button>
+            </Center>
+
+        </div>
     );
 }
