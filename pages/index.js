@@ -56,7 +56,7 @@ export default function Home() {
             </Text>
           </Heading>
           <Text color={'gray.500'}>
-            In base al menu che avrai intenzione di servire ti daremo un'indicazione generica sul tipo
+            In base al menu che avrai intenzione di servire ti daremo un indicazione generica sul tipo
             di vino che sarebbe meglio servire, inoltre ti forniremo anche un esempio di categoria di vini
             su cui puntare e perchè no magari anche qualche marchio in particolare!
           </Text>
