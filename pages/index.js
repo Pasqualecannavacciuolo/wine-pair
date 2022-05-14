@@ -1,5 +1,15 @@
 import { useRouter } from 'next/router'
 import { supabase } from "../lib/initSupabase";
+import { Container } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
+import {
+  FormControl,
+  FormLabel,
+  FormErrorMessage,
+  FormHelperText,
+  Input,
+  Select,
+} from '@chakra-ui/react';
 
 export default function Home() {
   const router = useRouter()
@@ -10,10 +20,10 @@ export default function Home() {
 
     // Get data from the form.
     const data = {
-        antipasto: event.target.antipasto.value,
-        primo: event.target.primo.value,
-        secondo: event.target.secondo.value,
-        dolce: event.target.dolce.value
+      antipasto: event.target.antipasto.value,
+      primo: event.target.primo.value,
+      secondo: event.target.secondo.value,
+      dolce: event.target.dolce.value
     }
 
     // Send the data to the server in JSON format.
@@ -25,29 +35,43 @@ export default function Home() {
       headers: {'Content-Type': 'application/json'},
       body: JSONdata
     });*/
-    
+
 
     const { dati } = await supabase
-    .from("ricerca")
-    .insert([
-      {
-        id: 1,
-        antipasto: data.antipasto,
-        primo: data.primo,
-        secondo: data.secondo
-      }
-    ]);
+      .from("ricerca")
+      .insert([
+        {
+          id: 1,
+          antipasto: data.antipasto,
+          primo: data.primo,
+          secondo: data.secondo
+        }
+      ]);
 
     //console.log(result);
     alert(`I dati sono stati registrati`);
-    
+
     // Redirecting to output page
     router.push('/output')
   }
 
   return (
-    <div className="centered-container">
-      <form className="border-25 outer-shadow-2" onSubmit={handleSubmit} method="post">
+    <Container maxW='2xl' centerContent>
+      <Box padding='4' maxW='md'>
+        <form className="border-25 outer-shadow-2" onSubmit={handleSubmit} method="post">
+          <FormControl>
+            <FormLabel htmlFor='antipasto'>Antipasto</FormLabel>
+            <Select name="antipasto" id="antipasto" placeholder='Inserire antipasto'>
+            <option value="antipasto a base di carne rossa">A base di carne rossa</option>
+            <option value="antipasto a base di carne bianca">A base di carne bianca</option>
+            <option value="antipasto a base di pesce leggero">A base di pesce leggero</option>
+            <option value="antipasto a base di pesce ricco">A base di pesce ricco</option>
+            <option value="salumi affettati">Salumi affettati</option>
+            <option value="formaggi freschi">Formaggi freschi</option>
+            <option value="formaggi stagionati">Formaggi stagionati</option>
+            <option value="verdure">Verdure</option>
+            </Select>
+          </FormControl>
           <label htmlFor="antipasto">Antipasto </label>
           <select className="input border-5" name="antipasto" id="antipasto">
             <option value="antipasto a base di carne rossa">A base di carne rossa</option>
@@ -85,7 +109,8 @@ export default function Home() {
 
           <button className="button button-default margin-TopAndBottom border-5" type="submit" value="Submit"><h2>Submit</h2></button>
 
-      </form>
-    </div>
+        </form>
+      </Box>
+    </Container>
   )
 }
