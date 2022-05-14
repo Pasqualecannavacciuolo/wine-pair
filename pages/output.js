@@ -356,7 +356,7 @@ export default function Output() {
             .from('ricerca')
             .delete()
             .match({ id: 1 })
-        router.push('/');
+        router.push('/form');
     }
 
     

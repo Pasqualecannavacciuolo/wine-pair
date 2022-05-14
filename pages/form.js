@@ -20,10 +20,10 @@ export default function MenuForm() {
 
     // Get data from the form.
     const data = {
-      antipasto: event.target.antipasto.value,
-      primo: event.target.primo.value,
-      secondo: event.target.secondo.value,
-      dolce: event.target.dolce.value
+      antipasto: antipasto.value,
+      primo: primo.value,
+      secondo: secondo.value,
+      dolce: dolce.value
     }
 
     // Send the data to the server in JSON format.
@@ -64,35 +64,35 @@ export default function MenuForm() {
           <FormControl>
             <FormLabel htmlFor='antipasto'>Antipasto</FormLabel>
             <Select color={'gray.500'} name="antipasto" id="antipasto" placeholder='Inserire antipasto'>
-            <option value="antipasto a base di carne rossa">A base di carne rossa</option>
-            <option value="antipasto a base di carne bianca">A base di carne bianca</option>
-            <option value="antipasto a base di pesce leggero">A base di pesce leggero</option>
-            <option value="antipasto a base di pesce ricco">A base di pesce ricco</option>
-            <option value="salumi affettati">Salumi affettati</option>
-            <option value="formaggi freschi">Formaggi freschi</option>
-            <option value="formaggi stagionati">Formaggi stagionati</option>
-            <option value="verdure">Verdure</option>
+              <option value='antipasto a base di carne rossa'>A base di carne rossa</option>
+              <option value='antipasto a base di carne bianca'>A base di carne bianca</option>
+              <option value='antipasto a base di pesce leggero'>A base di pesce leggero</option>
+              <option value='antipasto a base di pesce ricco'>A base di pesce ricco</option>
+              <option value='salumi affettati'>Salumi affettati</option>
+              <option value='formaggi freschi'>Formaggi freschi</option>
+              <option value='formaggi stagionati'>Formaggi stagionati</option>
+              <option value='verdure'>Verdure</option>
             </Select>
           </FormControl>
 
           <FormControl>
             <FormLabel htmlFor='primo'>Primo</FormLabel>
             <Select color={'gray.500'} name="primo" id="primo" placeholder='Inserire primo piatto'>
-            <option value="primo a base di carne rossa">A base di carne rossa</option>
-            <option value="primo a base di carne bianca">A base di carne bianca</option>
-            <option value="primo a base di sugo di carne">A base di sugo di carne</option>
-            <option value="primo a base di pesce leggero">A base di pesce leggero</option>
-            <option value="primo a base di pesce ricco">A base di pesce ricco</option>
+              <option value="primo a base di carne rossa">A base di carne rossa</option>
+              <option value="primo a base di carne bianca">A base di carne bianca</option>
+              <option value="primo a base di sugo di carne">A base di sugo di carne</option>
+              <option value="primo a base di pesce leggero">A base di pesce leggero</option>
+              <option value="primo a base di pesce ricco">A base di pesce ricco</option>
             </Select>
           </FormControl>
 
           <FormControl>
-            <FormLabel htmlFor='secondo'>Primo</FormLabel>
+            <FormLabel htmlFor='secondo'>Secondo</FormLabel>
             <Select color={'gray.500'} name="secondo" id="secondo" placeholder='Inserire secondo piatto'>
-            <option value="secondo a base di carne rossa">A base di carne rossa</option>
-            <option value="secondo a base di carne bianca">A base di carne bianca</option>
-            <option value="secondo a base di pesce leggero">A base di pesce leggero</option>
-            <option value="secondo a base di pesce ricco">A base di pesce ricco</option>
+              <option value="secondo a base di carne rossa">A base di carne rossa</option>
+              <option value="secondo a base di carne bianca">A base di carne bianca</option>
+              <option value="secondo a base di pesce leggero">A base di pesce leggero</option>
+              <option value="secondo a base di pesce ricco">A base di pesce ricco</option>
             </Select>
           </FormControl>
 
