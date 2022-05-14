@@ -386,7 +386,7 @@ export default function Output() {
                             key={vino.id}
                             maxW={'250px'}
                             w={'full'}
-                            bg={useColorModeValue('white', 'gray.900')}
+                            bg={'white'}
                             boxShadow={'2xl'}
                             rounded={'md'}
                             p={6}
