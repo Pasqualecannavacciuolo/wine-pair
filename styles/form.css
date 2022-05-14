@@ -23,6 +23,7 @@ label {
     height: 30px;
     width: 100%;
     -webkit-appearance: none;
+    color: var(--primary-text-color);
 }
 
 .input:focus {
