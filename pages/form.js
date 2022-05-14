@@ -105,6 +105,7 @@ export default function MenuForm() {
           </FormControl>
 
           <Button
+              onClick={handleSubmit}
               className="margin-TopAndBottom"
               borderRadius='5px'
               size={'lg'}
