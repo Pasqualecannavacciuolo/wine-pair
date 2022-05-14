@@ -22,8 +22,6 @@ label {
     border: none;
     height: 30px;
     width: 100%;
-    -webkit-appearance: none;
-    color: var(--primary-text-color);
 }
 
 .input:focus {
@@ -74,5 +72,9 @@ input[type="checkbox"] {
     form {
         width: 100%;
         margin: 10px;
+    }
+    .input {
+        -webkit-appearance: listbox !important;
+        color: var(--primary-text-color);
     }
 }
