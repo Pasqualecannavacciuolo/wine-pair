@@ -77,4 +77,5 @@ input[type="checkbox"] {
         -webkit-appearance: listbox !important;
         color: var(--primary-text-color);
     }
+    select::-ms-expand { display: block; }
 }
