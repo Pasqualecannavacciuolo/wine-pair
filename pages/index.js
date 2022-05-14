@@ -47,9 +47,9 @@ export default function Home() {
 
   return (
     <div className="centered-container">
-      <form className="border-15 outer-shadow-2" onSubmit={handleSubmit} method="post">
+      <form className="border-25 outer-shadow-2" onSubmit={handleSubmit} method="post">
           <label htmlFor="antipasto">Antipasto </label>
-          <select className="input" name="antipasto" id="antipasto">
+          <select className="input border-5" name="antipasto" id="antipasto">
             <option value="antipasto a base di carne rossa">A base di carne rossa</option>
             <option value="antipasto a base di carne bianca">A base di carne bianca</option>
             <option value="antipasto a base di pesce leggero">A base di pesce leggero</option>
@@ -61,7 +61,7 @@ export default function Home() {
           </select>
 
           <label htmlFor="primo">Primo </label>
-          <select className="input" name="primo" id="primo">
+          <select className="input border-5" name="primo" id="primo">
             <option value="primo a base di carne rossa">A base di carne rossa</option>
             <option value="primo a base di carne bianca">A base di carne bianca</option>
             <option value="primo a base di sugo di carne">A base di sugo di carne</option>
@@ -70,7 +70,7 @@ export default function Home() {
           </select>
 
           <label htmlFor="secondo">Secondo </label>
-          <select className="input" name="secondo" id="secondo">
+          <select className="input border-5" name="secondo" id="secondo">
             <option value="secondo a base di carne rossa">A base di carne rossa</option>
             <option value="secondo a base di pesce leggero">A base di pesce leggero</option>
             <option value="secondo a base di pesce ricco">A base di pesce ricco</option>
@@ -78,7 +78,7 @@ export default function Home() {
           </select>
 
           <label htmlFor="dolce">Dolce </label>
-          <select className="input" name="dolce" id="dolce">
+          <select className="input border-5" name="dolce" id="dolce">
             <option value="si">Si</option>
             <option value="no">No</option>
           </select>
