@@ -60,7 +60,7 @@ export default function MenuForm() {
     <Container maxW='2xl' centerContent>
     
         <form className="border-25 outer-shadow-2" onSubmit={handleSubmit} method="post">
-          <Center><Heading m={10} color={'gray.900'}>Indicaci il tuo menu</Heading></Center>
+          <Center><Heading m={10} color={'gray.900'} className="form-title">Indicaci il tuo menu</Heading></Center>
           <FormControl>
             <FormLabel htmlFor='antipasto'>Antipasto</FormLabel>
             <Select color={'gray.500'} name="antipasto" id="antipasto" placeholder='Inserire antipasto'>
