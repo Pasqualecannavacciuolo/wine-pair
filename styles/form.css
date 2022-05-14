@@ -4,7 +4,7 @@ form {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    background-color: var(--element-bg-color);
+    background-color: #FFF;
     color: var(--secondary-text-color);
 }
 
@@ -70,10 +70,13 @@ input[type="checkbox"] {
 
 @media screen and (max-width: 600px){
     form {
-        width: 100%;
-        margin: 10px;
+        width: 90vw;
     }
     .input {
         color: var(--primary-text-color);
+    }
+    .chakra-heading.css-tpjzpj {
+        font-size: 26px;
+        margin: 30px 0;
     }
 }
