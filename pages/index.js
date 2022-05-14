@@ -57,7 +57,7 @@ export default function Home() {
 
   return (
     <Container maxW='2xl' centerContent>
-      <Box padding='4' maxW='md'>
+      
         <form className="border-25 outer-shadow-2" onSubmit={handleSubmit} method="post">
           <FormControl>
             <FormLabel htmlFor='antipasto'>Antipasto</FormLabel>
@@ -110,7 +110,7 @@ export default function Home() {
           <button className="button button-default margin-TopAndBottom border-5" type="submit" value="Submit"><h2>Submit</h2></button>
 
         </form>
-      </Box>
+      
     </Container>
   )
 }
