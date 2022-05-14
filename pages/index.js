@@ -9,6 +9,7 @@ import {
   FormHelperText,
   Input,
   Select,
+  Button,
 } from '@chakra-ui/react';
 
 export default function Home() {
@@ -72,43 +73,37 @@ export default function Home() {
             <option value="verdure">Verdure</option>
             </Select>
           </FormControl>
-          <label htmlFor="antipasto">Antipasto </label>
-          <select className="input border-5" name="antipasto" id="antipasto">
-            <option value="antipasto a base di carne rossa">A base di carne rossa</option>
-            <option value="antipasto a base di carne bianca">A base di carne bianca</option>
-            <option value="antipasto a base di pesce leggero">A base di pesce leggero</option>
-            <option value="antipasto a base di pesce ricco">A base di pesce ricco</option>
-            <option value="salumi affettati">Salumi affettati</option>
-            <option value="formaggi freschi">Formaggi freschi</option>
-            <option value="formaggi stagionati">Formaggi stagionati</option>
-            <option value="verdure">Verdure</option>
-          </select>
 
-          <label htmlFor="primo">Primo </label>
-          <select className="input border-5" name="primo" id="primo">
+          <FormControl>
+            <FormLabel htmlFor='primo'>Primo</FormLabel>
+            <Select name="primo" id="primo" placeholder='Inserire primo piatto'>
             <option value="primo a base di carne rossa">A base di carne rossa</option>
             <option value="primo a base di carne bianca">A base di carne bianca</option>
             <option value="primo a base di sugo di carne">A base di sugo di carne</option>
             <option value="primo a base di pesce leggero">A base di pesce leggero</option>
             <option value="primo a base di pesce ricco">A base di pesce ricco</option>
-          </select>
+            </Select>
+          </FormControl>
 
-          <label htmlFor="secondo">Secondo </label>
-          <select className="input border-5" name="secondo" id="secondo">
+          <FormControl>
+            <FormLabel htmlFor='secondo'>Primo</FormLabel>
+            <Select name="secondo" id="secondo" placeholder='Inserire secondo piatto'>
             <option value="secondo a base di carne rossa">A base di carne rossa</option>
+            <option value="secondo a base di carne bianca">A base di carne bianca</option>
             <option value="secondo a base di pesce leggero">A base di pesce leggero</option>
             <option value="secondo a base di pesce ricco">A base di pesce ricco</option>
-            <option value="secondo a base di carne bianca">A base di carne bianca</option>
-          </select>
+            </Select>
+          </FormControl>
 
-          <label htmlFor="dolce">Dolce </label>
-          <select className="input border-5" name="dolce" id="dolce">
-            <option value="si">Si</option>
-            <option value="no">No</option>
-          </select>
+          <FormControl>
+            <FormLabel htmlFor='dolce'>Dolce</FormLabel>
+            <Select name="dolce" id="dolce" placeholder='Presenza di un dolce'>
+              <option value="si">Si</option>
+              <option value="no">No</option>
+            </Select>
+          </FormControl>
 
-          <button className="button button-default margin-TopAndBottom border-5" type="submit" value="Submit"><h2>Submit</h2></button>
-
+          <Button type='Submit' className="button button-default margin-TopAndBottom border-5">Invia</Button>
         </form>
       
     </Container>
