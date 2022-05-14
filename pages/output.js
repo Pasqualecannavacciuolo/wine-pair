@@ -396,7 +396,7 @@ export default function Output() {
                             </Box>
                             <Stack>
                                 <Heading
-                                    color={useColorModeValue('gray.700', 'white')}
+                                    color={'gray.700'}
                                     fontSize={'2xl'}
                                     fontFamily={'body'}>
                                     {vino.nome}
