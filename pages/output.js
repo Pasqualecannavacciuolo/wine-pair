@@ -25,6 +25,8 @@ export default function Output() {
     const [piatti_bianco_leggero, setPiattiBiancoLeggero] = useState(null);
     const [piatti_bianco_strutturato, setPiattiBiancoStruturato] = useState(null);
 
+    // Getting the session id to search the rich SEARCH in the Database
+    let local_id = sessionStorage.getItem("local_id");
 
     useEffect(() => {
         getRicerca();
@@ -35,7 +37,7 @@ export default function Output() {
             let { data, error, status } = await supabase
                 .from('ricerca')
                 .select(`antipasto, primo, secondo`)
-                .eq('id', 1)
+                .eq('id', local_id)
                 .single();
 
             if (error && status !== 406) {
@@ -264,7 +266,7 @@ export default function Output() {
         const { data, error } = await supabase
             .from('ricerca')
             .delete()
-            .match({ id: 1 })
+            .match({ id: local_id })
         router.push('/form');
     }
 

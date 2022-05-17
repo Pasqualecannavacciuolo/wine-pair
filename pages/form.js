@@ -10,6 +10,7 @@ import {
   Heading,
   Center,
 } from '@chakra-ui/react';
+import { v4 as uuid } from 'uuid';
 
 export default function MenuForm() {
   const router = useRouter()
@@ -36,12 +37,14 @@ export default function MenuForm() {
       body: JSONdata
     });*/
 
+    let unique_id = uuid();
+    sessionStorage.setItem("local_id", unique_id);
 
     const { dati } = await supabase
       .from("ricerca")
       .insert([
         {
-          id: 1,
+          id: unique_id,
           antipasto: data.antipasto,
           primo: data.primo,
           secondo: data.secondo
