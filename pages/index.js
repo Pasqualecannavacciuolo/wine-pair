@@ -13,6 +13,8 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 
+import Head from 'next/head'
+
 export default function Home() {
   const router = useRouter();
   
@@ -21,94 +23,94 @@ export default function Home() {
   }
 
   return (
+    <>
+    <Head>
+      <link rel="apple-touch-icon" sizes="180x180" href="public/touch_icon.png" />
+    </Head>
     <Container maxW={'7xl'}>
-      <Stack
-        align={'center'}
-        spacing={{ base: 8, md: 10 }}
-        py={{ base: 20, md: 28 }}
-        direction={{ base: 'column', md: 'row' }}>
-        <Stack flex={1} spacing={{ base: 5, md: 10 }}>
-          <Heading
-            lineHeight={1.1}
-            fontWeight={600}
-            fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}>
-            <Text
-              as={'span'}
-              position={'relative'}
-              _after={{
-                content: "''",
-                width: 'full',
-                height: '30%',
-                position: 'absolute',
-                bottom: 1,
-                left: 0,
-                bg: 'purple.100',
-                zIndex: -1,
-              }}>
-              Dal menu,
-            </Text>
-            <br />
-            <Text as={'span'} color={'purple.500'}>
-              al vino!
-            </Text>
-          </Heading>
-          <Text color={'gray.500'}>
-            In base al menu che avrai intenzione di servire ti indicheremo in modo generico il tipo
-            di vino che sarebbe meglio servire, inoltre ti forniremo anche un esempio di categoria di vini
-            su cui puntare e perchè no magari anche qualche marchio in particolare!
-          </Text>
-          <Stack
-            spacing={{ base: 4, sm: 6 }}
-            direction={{ base: 'column', sm: 'row' }}>
-            <Button
-              onClick={goToMenuForm}
-              borderRadius='5px'
-              size={'lg'}
-              fontWeight={'normal'}
-              px={6}
-              colorScheme={'red'}
-              bg={'purple.600'}
-              _hover={{ bg: 'purple.700' }}>
-              Iniziamo!
-            </Button>
-          </Stack>
-        </Stack>
-        <Flex
-          flex={1}
-          justify={'center'}
+        <Stack
           align={'center'}
-          position={'relative'}
-          w={'full'}>
-          <Blob
-            w={'150%'}
-            h={'150%'}
-            position={'absolute'}
-            top={'-20%'}
-            left={0}
-            zIndex={-1}
-            color={useColorModeValue('purple.100', 'red.400')}
-          />
-          <Box
+          spacing={{ base: 8, md: 10 }}
+          py={{ base: 20, md: 28 }}
+          direction={{ base: 'column', md: 'row' }}>
+          <Stack flex={1} spacing={{ base: 5, md: 10 }}>
+            <Heading
+              lineHeight={1.1}
+              fontWeight={600}
+              fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}>
+              <Text
+                as={'span'}
+                position={'relative'}
+                _after={{
+                  content: "''",
+                  width: 'full',
+                  height: '30%',
+                  position: 'absolute',
+                  bottom: 1,
+                  left: 0,
+                  bg: 'purple.100',
+                  zIndex: -1,
+                }}>
+                Dal menu,
+              </Text>
+              <br />
+              <Text as={'span'} color={'purple.500'}>
+                al vino!
+              </Text>
+            </Heading>
+            <Text color={'gray.500'}>
+              In base al menu che avrai intenzione di servire ti indicheremo in modo generico il tipo
+              di vino che sarebbe meglio servire, inoltre ti forniremo anche un esempio di categoria di vini
+              su cui puntare e perchè no magari anche qualche marchio in particolare!
+            </Text>
+            <Stack
+              spacing={{ base: 4, sm: 6 }}
+              direction={{ base: 'column', sm: 'row' }}>
+              <Button
+                onClick={goToMenuForm}
+                borderRadius='5px'
+                size={'lg'}
+                fontWeight={'normal'}
+                px={6}
+                colorScheme={'red'}
+                bg={'purple.600'}
+                _hover={{ bg: 'purple.700' }}>
+                Iniziamo!
+              </Button>
+            </Stack>
+          </Stack>
+          <Flex
+            flex={1}
+            justify={'center'}
+            align={'center'}
             position={'relative'}
-            height={'300px'}
-            rounded={'2xl'}
-            boxShadow={'2xl'}
-            width={'full'}
-            overflow={'hidden'}>
-            <Image
-              alt={'Hero Image'}
-              fit={'cover'}
-              align={'center'}
-              w={'100%'}
-              h={'100%'}
-              src={
-                'images/hero-image.png'
-              }
-            />
-          </Box>
-        </Flex>
-      </Stack>
-    </Container>
+            w={'full'}>
+            <Blob
+              w={'150%'}
+              h={'150%'}
+              position={'absolute'}
+              top={'-20%'}
+              left={0}
+              zIndex={-1}
+              color={useColorModeValue('purple.100', 'red.400')} />
+            <Box
+              position={'relative'}
+              height={'300px'}
+              rounded={'2xl'}
+              boxShadow={'2xl'}
+              width={'full'}
+              overflow={'hidden'}>
+              <Image
+                alt={'Hero Image'}
+                fit={'cover'}
+                align={'center'}
+                w={'100%'}
+                h={'100%'}
+                src={'images/hero-image.png'} />
+            </Box>
+          </Flex>
+        </Stack>
+      </Container></>
   );
 }
 
