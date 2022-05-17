@@ -170,7 +170,7 @@ export default function Output() {
     let output = new Set();
 
     // This object contains the basic information of a wine
-    const vino = function(id, image, nome, descrizione){
+    const vino = function (id, image, nome, descrizione) {
         let vino_generale = {};
         vino_generale.id = id;
         vino_generale.image = image;
@@ -178,7 +178,7 @@ export default function Output() {
         vino_generale.descrizione = descrizione;
         return vino_generale;
     }
-    
+
     // Searching the input in the dishes of every courses for every wine
     if (antipasto_rosso_leggero && primo_rosso_leggero && secondo_rosso_leggero) {
         let vino_rosso_leggero = new vino(new Date().getTime() + Math.random(), '/images/rosso-leggero.jpeg', "Rosso Leggero", "Un vino leggero da accompagnare a piatti con gusti delicati non troppo travolgenti");
@@ -220,7 +220,7 @@ export default function Output() {
 
 
     if (antipasto_bianco_leggero && primo_bianco_leggero && secondo_bianco_leggero) {
-        let vino_bianco_leggero = new vino(new Date().getTime() + Math.random(), '/images/bianco-leggero.png', "Bianco Leggero","Un vino leggero da accompagnare a piatti con gusti delicati non troppo travolgenti");
+        let vino_bianco_leggero = new vino(new Date().getTime() + Math.random(), '/images/bianco-leggero.png', "Bianco Leggero", "Un vino leggero da accompagnare a piatti con gusti delicati non troppo travolgenti");
         for (let i = 0; i < antipasto_bianco_leggero.length; i++) {
             if (antipasto_bianco_leggero[i] === antipasto) {
                 output.add(vino_bianco_leggero)
@@ -239,7 +239,7 @@ export default function Output() {
     }
 
     if (antipasto_bianco_strutturato && primo_bianco_strutturato && secondo_bianco_strutturato) {
-        let vino_bianco_strutturato = new vino(new Date().getTime() + Math.random(), '/images/bianco-strutturato.jpeg', "Bianco Strutturato","Un vino strutturato da accompagnare a piatti con gusti forti e decisi per godersi al meglio la cena");
+        let vino_bianco_strutturato = new vino(new Date().getTime() + Math.random(), '/images/bianco-strutturato.jpeg', "Bianco Strutturato", "Un vino strutturato da accompagnare a piatti con gusti forti e decisi per godersi al meglio la cena");
         for (let i = 0; i < antipasto_bianco_strutturato.length; i++) {
             if (antipasto_bianco_strutturato[i] === antipasto) {
                 output.add(vino_bianco_strutturato)
@@ -263,8 +263,13 @@ export default function Output() {
     final = Array.from(output);
     console.log(final)
 
+    
+
+   
     const backToHome = async () => {
-        const { data, error } = await supabase
+        local_id = sessionStorage.getItem("local_id");
+        console.log("Local id: " + local_id);
+        const { data } = await supabase
             .from('ricerca')
             .delete()
             .match({ id: local_id })
@@ -307,20 +312,20 @@ export default function Output() {
                     ))}
                 </SimpleGrid>
             </Center>
-            
+
             <Center>
                 <Button
-                onClick={backToHome}
-                type='submit'
-                className="margin-TopAndBottom"
-                borderRadius='5px'
-                size={'lg'}
-                fontWeight={'normal'}
-                px={6}
-                colorScheme={'purple'}
-                bg={'purple.600'}
-                _hover={{ bg: 'purple.700' }}>
-                Ritorna al menu
+                    onClick={backToHome}
+                    type='submit'
+                    className="margin-TopAndBottom"
+                    borderRadius='5px'
+                    size={'lg'}
+                    fontWeight={'normal'}
+                    px={6}
+                    colorScheme={'purple'}
+                    bg={'purple.600'}
+                    _hover={{ bg: 'purple.700' }}>
+                    Ritorna al menu
                 </Button>
             </Center>
 
