@@ -25,10 +25,11 @@ export default function Output() {
     const [piatti_bianco_leggero, setPiattiBiancoLeggero] = useState(null);
     const [piatti_bianco_strutturato, setPiattiBiancoStruturato] = useState(null);
 
-    // Getting the session id to search the rich SEARCH in the Database
-    let local_id = sessionStorage.getItem("local_id");
+    let local_id;
 
     useEffect(() => {
+        // Getting the session id to search the rich SEARCH in the Database
+        local_id = sessionStorage.getItem("local_id");
         getRicerca();
     }, []);
 
